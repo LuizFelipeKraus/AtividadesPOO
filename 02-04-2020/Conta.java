@@ -20,16 +20,24 @@ public class Conta {
         c1.numero = 123;
         c1.agencia = "45678-9";
         c1.saldo = 50.0;
-        c1.dataDeAbertura = "04/06/2015";
+        data dataC1 = new data();
+        c1.dataDeAbertura = dataC1;
+        dataC1.dia = 15;
+        dataC1.mes = 10;
+        dataC1.ano = 2015;
         //c1.deposita(100);
         System.out.println(c1.recuperaDadosParaImpressao());
         
         modeloConta c2 = new modeloConta();
+        data dataC2 = new data();
         c2.titular = "Hugo";
         c2.numero = 123;
         c2.agencia = "45678-9";
         c2.saldo = 50.0;
-        c2.dataDeAbertura = "04/06/2015";
+        c2.dataDeAbertura = dataC2;
+        dataC2.dia = 24;
+        dataC2.mes = 05;
+        dataC2.ano = 2017;
         if(c1 == c2){
             System.out.println("Iguais");
         }else{

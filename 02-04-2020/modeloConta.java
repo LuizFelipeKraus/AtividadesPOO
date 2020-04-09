@@ -3,11 +3,11 @@ package conta;
 
 
 public class modeloConta {
+    data dataDeAbertura;
     String titular;
     int numero;
     String agencia;
     double saldo;
-    String dataDeAbertura;
     
     void saca(double valor){
         if(valor<=this.saldo){
@@ -28,7 +28,9 @@ public class modeloConta {
         dados += "\nNúmero: "+ this.numero;
         dados += "\nAgencia: " + this.agencia;
         dados += "\nSaldo: " + this.saldo;
-        dados += "\nData de Abertura: " + this.dataDeAbertura; 
+        dados += "\nData de Abertura: " + this.dataDeAbertura.dia;
+        dados += "\nData de Abertura: " + this.dataDeAbertura.mes;
+        dados += "\nData de Abertura: " + this.dataDeAbertura.ano;
         return dados;
     }
 }
